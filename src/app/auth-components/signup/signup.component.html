@@ -1,15 +1,15 @@
 <form [formGroup]="signupForm" (ngSubmit)="register()">
+  <h2 style="margin-left: 110px">Sign Up</h2><br><br>
   <div>
-    <label for="firstName">Name</label>
-    <input id="firstName" formControlName="name">
+
+    <input id="firstName" formControlName="name" placeholder="name">
     <div *ngIf="signupForm.get('name')?.touched && signupForm.get('name')?.invalid">
       <small class="error">Cette input n'est pas valide</small>
     </div>
   </div>
 
   <div>
-    <label for="email">Email</label>
-    <input id="email" type="email" formControlName="email">
+    <input id="email" type="email" formControlName="email" placeholder="email">
     <div *ngIf="signupForm.get('email')?.touched && signupForm.get('email')?.invalid">
       <small class="error" *ngIf="signupForm.get('email')?.errors?.['required']">
         Cette input n'est pas valide
@@ -21,8 +21,7 @@
   </div>
 
   <div>
-    <label for="password">Password</label>
-    <input id="password" type="password" formControlName="password">
+    <input id="password" type="password" formControlName="password" placeholder="Password">
     <div *ngIf="signupForm.get('password')?.touched && signupForm.get('password')?.invalid">
       <small class="error" *ngIf="signupForm.get('password')?.errors?.['required']">
         Cette input n'est pas valide
@@ -34,8 +33,7 @@
   </div>
 
   <div>
-    <label for="check">Check Password</label>
-    <input id="check" formControlName="checkPassword">
+    <input id="check" formControlName="checkPassword" placeholder="checkpassword">
     <div *ngIf="signupForm.get('checkPassword')?.touched && signupForm.get('checkPassword')?.errors?.['passwordMismatch']">
       <small class="error">Cette input n'est pas valide</small>
     </div>

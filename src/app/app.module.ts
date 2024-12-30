@@ -17,13 +17,17 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 import {NzFormModule} from "ng-zorro-antd/form";
 import {NzSpinModule} from "ng-zorro-antd/spin";
 import {DemoNgZorroAntdModule} from   "./DemoNgZorro";
+import { LoginComponent } from './auth-components/login/login.component';
+import { NavbarComponent } from './auth-components/navbar/navbar.component';
 
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
     AppComponent,
-    SignupComponent
+    SignupComponent,
+    LoginComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +41,7 @@ registerLocaleData(en);
     NzFormModule,
     ReactiveFormsModule,
     NzSpinModule,
-    HttpClientModule
+
 
   ],
   providers: [
